@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Image</title>
+    <style>
+        #main-product-image{
+        width:350px;
+        height:350px;
+        object-fit: cover;
+        border: 15px double rgb(235, 77, 77);
+        border-radius: 30px;
+        box-shadow: 0px 0px 15px 0px rgb(84, 11, 11);
+        display: block;
+        margin: 25px auto;
+        }
+    
+        .product-image{
+            object-fit:cover;
+            height: 130px;
+            width: 80px;
+            border-radius: 10px;
+            border: 8px double rgb(169, 40, 169);
+            cursor: pointer;
+            margin:5px;
+            padding:2px;
+          }
+        .product-images-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/rose.png" id="main-product-image"/>
+     <div class="product-images-container">
+     <img src="./images/rose.png" class="product-image"  onclick="changeImage(1)"/>
+     <img src="./images/hibiscus.png" class="product-image"  onclick="changeImage(2)"/>
+     <img src="./images//lotus-flower.png" class="product-image"  onclick="changeImage(3)"/>
+     <img src="./images/sunflower.png" class="product-image"  onclick="changeImage(4)"/>
+     <img src="./images/lily.png" class="product-image"  onclick="changeImage(5)"/>
+    </div>
+
+    <script>
+        function changeImage(num){
+        const mainImage = document.getElementById('main-product-image');
+
+        if(num==1){
+            mainimage.src = "images/rose.png";
+        }else if(num==2){
+            mainImage.src = "images/hibiscus.png";
+        }else if(num==3){
+            mainImage.src = "images/lotus-flower.png";
+        }else if(num==4){
+            mainImage.src = "images/sunflower.png";
+        }else if(num==5){
+            mainImage.src = "images/lily.png";
+    }
+   }
+    </script>
+</body>
+</html>
